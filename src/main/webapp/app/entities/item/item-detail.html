@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span>Item</span> {{vm.item.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Item Id</span></dt>
+        <dd>
+            <span>{{vm.item.itemId}}</span>
+        </dd>
+        <dt><span>Title</span></dt>
+        <dd>
+            <span>{{vm.item.title}}</span>
+        </dd>
+        <dt><span>Descr</span></dt>
+        <dd>
+            <span>{{vm.item.descr}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="item-detail.edit({id:vm.item.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>
